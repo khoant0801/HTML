@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NguyenTrongKhoa</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Times New Roman", serif;
+        }
+
+        .khung {
+            background-color: #b5302b;
+            color: #f2e4c0;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 16px;
+        }
+
+        /* QUAN TRỌNG: xếp các card theo hàng ngang */
+        .hang-ngang {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            align-items: stretch;
+            /* các card cao bằng nhau */
+        }
+
+        .the {
+            flex: 1;
+            /* chia đều chiều rộng */
+            min-width: 0;
+            /* tránh ảnh làm card bị phình to */
+            background-color: #f2e4c0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+        }
+
+        /* QUAN TRỌNG: ép mọi ảnh cùng kích thước */
+        .the img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            /* cắt vừa khung, không méo */
+            display: block;
+            border-radius: 6px;
+        }
+
+        .the p {
+            color: #b5302b;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+
+        /* Màn hình nhỏ thì xếp lại thành cột */
+        @media (max-width: 700px) {
+            .hang-ngang {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="khung">Responsive Cards Design</header>
+    <div class="hang-ngang">
+        <div class="the">
+            <img src="./OIP.jpg"
+                alt="A long-haired brown tabby cat with bright green eyes crouches in the grass outdoors, looking alert and curious. Lush green foliage fills the background.">
+            <h3>Vẻ đẹp hoang dã của mèo Maine Coon. Với bộ lông dày và đôi mắt sắc sảo, chúng như một tác phẩm nghệ
+                thuật tự nhiên. Chúng là những người bạn trung thành và kiên nhẫn.</h3>
+        </div>
+        <div class="the">
+            <img src="./pexels-marwan-benjamin-622158651-19616837.jpg"
+                alt="A long-haired brown tabby cat with bright green eyes crouches in the grass outdoors, looking alert and curious. Lush green foliage fills the background.">
+            <h3>Đôi mắt xanh như ngọc của nó có thể làm tan chảy mọi trái tim. Chú mèo Golden này là định nghĩa của sự
+                dễ thương.</h3>
+        </div>
+        <div class="the">
+            <img src="./R.jpg"
+                alt="A long-haired brown tabby cat with bright green eyes crouches in the grass outdoors, looking alert and curious. Lush green foliage fills the background.">
+            <h3>Sự sắc sảo của mèo Mướp tự nhiên. Vằn lông cổ điển và ánh nhìn thông thái thể hiện một bản năng săn mồi
+                mạnh mẽ. Chú mèo này là một biểu tượng của sự bền bỉ.</h3>
+        </div>
+    </div>
+</body>
+
+</html>
